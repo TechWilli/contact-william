@@ -10,7 +10,6 @@ import light from './themes/Light';
 import LanguageProvider from './contexts/LanguageContext';
 
 function App() {
-
   const [theme, setTheme] = useState(light);
 
   useEffect(() => {
@@ -24,7 +23,7 @@ function App() {
       if (theme.title === 'light') {
         localStorage.setItem('theme', JSON.stringify(dark));
         return dark;
-
+        
       } else {
         localStorage.setItem('theme', JSON.stringify(light));
         return light;

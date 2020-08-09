@@ -27,9 +27,8 @@ const Separator = styled.span`
 `;
 
 const LanguageSwitcher = (props) => {
-
   const { language, translateLanguage } = useContext(LanguageContext);
-
+  
   const [isPortuguese, setIsPortuguese] = useState(false);
   const [isEnglish, setIsEnglish] = useState(false);
 

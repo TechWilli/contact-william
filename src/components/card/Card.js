@@ -120,12 +120,11 @@ const SocialMediaContainer = styled.div`
 `;
 
 const Card = (props) => {
-
   const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     console.log('language', language);
-
+    
   }, [language]);
 
   return (
@@ -143,7 +142,6 @@ const Card = (props) => {
             <CardTitle>{"< William Araujo />"}</CardTitle>
             <CardText style={{ marginTop: 5, fontWeight: 'bold' }}>{language === 'PT-BR' ? 'Desenvolvedor Front-end' : 'Front-end Developer'}</CardText>
           </div>
-
         </div>
 
         <Divider />

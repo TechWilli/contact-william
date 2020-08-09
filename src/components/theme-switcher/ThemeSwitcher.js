@@ -29,7 +29,6 @@ const MoonIcon = styled(Moon)`
 `;
 
 const ThemeSwitcher = ({ toggleTheme }) => {
-
   const theme = useContext(ThemeContext);
 
   return (
