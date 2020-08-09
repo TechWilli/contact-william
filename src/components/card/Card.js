@@ -22,79 +22,77 @@ const CardContainer = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 `;
 
 const CardHeader = styled.div`
-	width: 100%;
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-	background-color: #0085AE;
-	height: 20%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 110px;
-	position: relative;
-	transition: .5s;
-
-	@media (max-width: 850px) {
-		margin-bottom: 80px;
-	}
+  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #0085AE;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 110px;
+  position: relative;
+  transition: .5s;
+  @media (max-width: 850px) {
+      margin-bottom: 80px;
+  }
 `;
 
 const Divider = styled.div`
-	margin-top: 15px;
-	margin-bottom: 15px;
-	border-top: 1px solid ${props => props.theme.colors.titleColor};
-	width: 100px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-top: 1px solid ${props => props.theme.colors.titleColor};
+  width: 100px;
 `;
 
 const GithubLogo = styled(Github)`
-	width: 50px;
-	height: 50px;
-	padding: 0 10px;
-	cursor: pointer;
-	fill: ${props => props.theme.colors.githubColor};
+  width: 50px;
+  height: 50px;
+  padding: 0 10px;
+  cursor: pointer;
+  fill: ${props => props.theme.colors.githubColor};
 `;
 
 const LinkedinLogo = styled(Linkedin)`
-	width: 50px;
-	height: 50px;
-	padding: 0 10px;
-	cursor: pointer;
-	fill: ${props => props.theme.colors.linkedinColor};
+  width: 50px;
+  height: 50px;
+  padding: 0 10px;
+  cursor: pointer;
+  fill: ${props => props.theme.colors.linkedinColor};
 `;
 
 const ImageProfile = styled.img`
-	border-radius: 50%;
-	object-fit: cover;
-	object-position: center;
-	width: 100%;
-	height: 100%;
-	display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  display: block;
 `;
 
 const ImageProfileContainer = styled.div`
-	border-radius: 50%;
-	width: 180px;
-	height: 180px;
-	position: relative;
-	top: 50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 4px solid white;
-	box-shadow: 3px 3px 10px rgb(0, 0, 0, .50);
-	transition: 0.5s;
-
-	@media (max-width: 850px) {
-		width: 130px;
-		height: 130px;
-	}
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  position: relative;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid white;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, .50);
+  transition: 0.5s;
+  @media (max-width: 850px) {
+    width: 130px;
+    height: 130px;
+  }
 `;
 
 const LinkToPage = styled.a`
@@ -105,69 +103,69 @@ const LinkToPage = styled.a`
 `;
 
 const CardTitle = styled.span`
-	color: ${props => props.theme.colors.titleColor};
+  color: ${props => props.theme.colors.titleColor};
   font-size: 2rem;
-	font-weight: bold;
+  font-weight: bold;
   transition: 0.5s;
-	
-	@media (max-width: 850px) {
-		font-size: 1.7rem;
+    
+  @media (max-width: 850px) {
+    font-size: 1.7rem;
   }
 `;
 
 const SocialMediaContainer = styled.div`
-	height: 25%;
-	display: flex;
-	justify-content: center;	
+    height: 25%;
+    display: flex;
+    justify-content: center;	
 `;
 
 const Card = (props) => {
 
-	const { language } = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
 
-	useEffect(() => {
-		console.log('language', language);
+  useEffect(() => {
+    console.log('language', language);
 
-	}, [language]);
+  }, [language]);
 
-	return (
-		<CardContainer>
-			<ContentWrapper>
-				<CardHeader>
-					<ImageProfileContainer>
-						<ImageProfile src={WilliamProfile} alt="william" />
-					</ImageProfileContainer>
-				</CardHeader>
+  return (
+    <CardContainer>
+      <ContentWrapper>
+        <CardHeader>
+          <ImageProfileContainer>
+            <ImageProfile src={WilliamProfile} alt="william" />
+          </ImageProfileContainer>
+        </CardHeader>
 
-				<div
-					style={{ width: "100%", /* backgroundColor: "lightgreen", */ /* height: "70%", */ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
-					<div>
-						<CardTitle>{"< William Araujo />"}</CardTitle>
-						<CardText style={{ marginTop: 5, fontWeight: 'bold' }}>{language === 'PT-BR' ? 'Desenvolvedor Front-end' : 'Front-end Developer'}</CardText>
-					</div>
+        <div
+          style={{ width: "100%", /* backgroundColor: "lightgreen", */ /* height: "70%", */ display: "flex", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
+          <div>
+            <CardTitle>{"< William Araujo />"}</CardTitle>
+            <CardText style={{ marginTop: 5, fontWeight: 'bold' }}>{language === 'PT-BR' ? 'Desenvolvedor Front-end' : 'Front-end Developer'}</CardText>
+          </div>
 
-				</div>
+        </div>
 
-				<Divider />
+        <Divider />
 
-				<div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", }}>
-					<div style={{ height: "75%", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: '0 25px' }}>
-						{language === 'PT-BR' ? <TextPTBR /> : <TextEN />}
-						<Divider />
-					</div>
-					<SocialMediaContainer>
-						<LinkToPage href="https://github.com/TechWilli" target="blank">
-							<GithubLogo title="github" />
-						</LinkToPage>
+        <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", }}>
+          <div style={{ height: "75%", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: '0 25px' }}>
+            {language === 'PT-BR' ? <TextPTBR /> : <TextEN />}
+            <Divider />
+          </div>
+          <SocialMediaContainer>
+            <LinkToPage href="https://github.com/TechWilli" target="blank">
+              <GithubLogo title="github" />
+            </LinkToPage>
 
-						<LinkToPage href="https://www.linkedin.com/in/william-araujo-516987112/" target="blank">
-							<LinkedinLogo title="linkedin" />
-						</LinkToPage>
-					</SocialMediaContainer>
-				</div>
-			</ContentWrapper>
-		</CardContainer>
-	);
+            <LinkToPage href="https://www.linkedin.com/in/william-araujo-516987112/" target="blank">
+              <LinkedinLogo title="linkedin" />
+            </LinkToPage>
+          </SocialMediaContainer>
+        </div>
+      </ContentWrapper>
+    </CardContainer>
+  );
 };
 
 export default Card;

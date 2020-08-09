@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useContext } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./App.css";
 import Layout from "./components/background-layout/Layout";
 import Card from "./components/card/Card";
@@ -14,14 +14,12 @@ function App() {
   const [theme, setTheme] = useState(light);
 
   useEffect(() => {
-    
     const storedTheme = localStorage.getItem('theme');
     setTheme(JSON.parse(storedTheme) || light);
 
   }, []);
 
   const toggleTheme = useCallback(() => {
-
     setTheme(theme => {
       if (theme.title === 'light') {
         localStorage.setItem('theme', JSON.stringify(dark));
@@ -33,7 +31,7 @@ function App() {
       }
     });
 
-  }, [theme]);
+  }, []);
 
   return (
     <LanguageProvider>
